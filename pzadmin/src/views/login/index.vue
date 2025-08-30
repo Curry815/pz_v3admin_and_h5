@@ -129,8 +129,6 @@ const countdown = reactive({
 
 let flag = false;
 const countdownChange = () => {
-  console.log("获取验证码");
-
   // 如果已发送不处理
   if (flag) return;
   // 判断手机号是否正确
