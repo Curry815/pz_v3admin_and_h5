@@ -16,4 +16,6 @@ export default {
       resolvers: [VantResolver()],
     }),
   ],
+  // 解决跨域
+  proxy: {},
 };

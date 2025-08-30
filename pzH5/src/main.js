@@ -8,5 +8,15 @@ const app = createApp(App);
 // 在实例上绑定属性
 app.config.globalProperties.$api = api;
 
+router.beforeEach((to, from, next) => {
+  if (to.path !== "/login") {
+    if (!localStorage.getItem("h5_token")) {
+      return next("/login");
+    }
+  }
+
+  next();
+});
+
 app.use(router);
 app.mount("#app");

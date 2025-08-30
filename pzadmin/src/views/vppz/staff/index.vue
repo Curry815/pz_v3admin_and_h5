@@ -231,8 +231,6 @@ const handleSelectionChange = (val) => {
 };
 
 const confirmEvent = () => {
-  console.log("11");
-
   if (!selectTableData.value.length) {
     return ElMessage.warning("请选择至少一条数据");
   }
